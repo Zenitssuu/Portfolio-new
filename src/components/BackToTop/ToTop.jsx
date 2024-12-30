@@ -23,7 +23,7 @@ function ToTop() {
   return (
     <button
     onClick={backToTop}
-    className={` fixed bottom-5 right-5 lg:right-16 text-2xl z-10 font-bold ${showButton ? "visible" : "hidden"} transition-all duration-300 ease-in-out`}>
+    className={` fixed bottom-16 right-5 lg:right-16 text-2xl z-10 font-bold ${showButton ? "visible" : "hidden"} transition-all duration-300 ease-in-out`}>
       <FaArrowUp />
     </button>
   );

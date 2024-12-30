@@ -9,6 +9,7 @@ const MiddleNavbar = () => {
     <nav className="middle_nav">
       <ul>
         {list?.map((item, index) => {
+          const Navicon = item?.icon
           return (
             <li
               key={index}
@@ -29,7 +30,8 @@ const MiddleNavbar = () => {
                 href={`#${item?.value}`}
                 rel="noopener noreferrer"
               >
-                {item?.icon}
+                {/* {item?.icon} */}
+                <Navicon/>
               </a>
             </li>
           );
