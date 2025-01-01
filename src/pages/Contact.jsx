@@ -25,7 +25,7 @@ const Contact = ({ no }) => {
     if (regex.test(email)) return true;
     return false;
   }
-  console.log("errors", errors);
+  // console.log("errors", errors);
   async function validateForm(formInfo) {
     let err_flag = true;
     setErrors((prev) => {
@@ -55,16 +55,16 @@ const Contact = ({ no }) => {
 
   async function sendMessage(e) {
     e.preventDefault();
-    // console.log(e.target);    
+    console.log(e.target);
     const isValid = await validateForm(formInfo);
     console.log(isValid, ">>>>>>>>..");
     if (Object.keys(errors).length === 0) {
       emailjs
         .sendForm(
-          "service_3jde51i",
-          "template_xqubb1f",
+          import.meta.env.VITE_EMAILSERVICEID,
+          import.meta.env.VITE_EMAILTEMPLATEID,
           e.target,
-          "Y3ixdrdDnYcmXtxKd"
+          import.meta.env.VITE_EMAILUSERID
         )
         .then(() => {
           toast.success("Your message is succefully delivered");
@@ -73,7 +73,6 @@ const Contact = ({ no }) => {
           toast.error("Message not delivered, please retry..");
         });
     }
-    e.target.reset();
   }
 
   return (
@@ -86,7 +85,7 @@ const Contact = ({ no }) => {
         <form onSubmit={sendMessage}>
           <div className="send_message_container">
             <input
-              name="name"
+              name="from_name"
               placeholder="Full Name"
               type="text"
               autoComplete="off"
@@ -96,7 +95,7 @@ const Contact = ({ no }) => {
             {errors?.name ? <p className="error_msg">{errors?.name}</p> : ""}
 
             <input
-              name="email"
+              name="from_email"
               placeholder="name@example.com"
               type="email"
               autoComplete="off"
@@ -119,7 +118,6 @@ const Contact = ({ no }) => {
             ) : (
               ""
             )}
-
             <button
               type="submit"
               className="submit_contact primary_outline_btn my-4 py-2 px-5"
