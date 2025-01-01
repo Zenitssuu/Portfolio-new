@@ -59,6 +59,7 @@ const Contact = ({ no }) => {
     const isValid = await validateForm(formInfo);
     console.log(isValid, ">>>>>>>>..");
     if (Object.keys(errors).length === 0) {
+
       emailjs
         .sendForm(
           import.meta.env.VITE_EMAILSERVICEID,
@@ -72,6 +73,7 @@ const Contact = ({ no }) => {
         .catch((err) => {
           toast.error("Message not delivered, please retry..");
         });
+        
     }
   }
 
