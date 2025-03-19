@@ -1,19 +1,18 @@
 import React, { useState } from "react"
-import { expDetailsData } from "../Data/data";
 
 const Experience = ({no}) => {
-  const [expDetails, setExpDetails] = useState(expDetailsData);
+  // const [expDetails, setExpDetails] = useState(expDetailsData);
 
-  function handleChangeActiveCompany(id) {
-    setExpDetails((prev) => {
-      const newData = prev.map(item => {
-        if(item.id===id) item.active=true;
-        else item.active = false;
-        return item;
-      })
-      return newData;
-    })
-  }
+  // function handleChangeActiveCompany(id) {
+  //   setExpDetails((prev) => {
+  //     const newData = prev.map(item => {
+  //       if(item.id===id) item.active=true;
+  //       else item.active = false;
+  //       return item;
+  //     })
+  //     return newData;
+  //   })
+  // }
 
   return (
     <section id="experience" className="experience">

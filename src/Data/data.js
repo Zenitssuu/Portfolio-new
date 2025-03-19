@@ -135,42 +135,6 @@ export const skillsArr = [
   },
 ];
 
-export const expDetailsData = [
-  {
-    id: "1",
-    active: true,
-    role: "Frontend Developer",
-    companyName: "TCS",
-    workDuration: "September 2022 - Present (" + (new Date().getFullYear() - 2022) + "+ years)",
-    points: [
-      {
-        id: 1,
-        value: "Worked in design and development of frontend applications.",
-      },
-      {
-        id: 2,
-        value:
-          "Collaborated with team members and 4+ years of experienced senior developers.",
-      },
-      {
-        id: 3,
-        value: "Assisted in building 100% reusable components for libraries.",
-      },
-    ],
-  },
-  // {
-  //   id : "2",
-  //   active: false,
-  //   role: "SDE",
-  //   companyName: "Google",
-  //   workDuration: "In Future",
-  //   points: [
-  //     { id: 1, value: "Worked in design and development of frontend applications." },
-  //     { id: 2, value: "Collaborated with team members and 4+ years of experienced senior developers." },
-  //     { id: 3, value: "Assisted in building 100% reusable components for libraries." },
-  //   ]
-  // },
-];
 
 export const myselfData = {
   name: "Siddhant Saiba",
@@ -210,8 +174,8 @@ export const projectData = [
     description:
       "It's a movie booking website built using React.js, Express.js, Feautures like book ticket on a particular date is available with secure transaction. Go check it out",
     tech_used: ["React.js", "Express.js", "Node.js", "Taiwlind"],
-    github: "https://github.com/Zenitssuu/Mega-Movie-Website",
-    live_link: "https://movie-website-two-sigma.vercel.app/",
+    github: "https://github.com/Zenitssuu/Movie-Application---Movie-Hunk",
+    live_link: "https://movie-application-movie-hunk-kn3xfztc1-siddhant-saibas-projects.vercel.app/",
   },
 ];
 
