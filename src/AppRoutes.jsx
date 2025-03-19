@@ -7,7 +7,7 @@ import Opening from "./pages/Opening.jsx";
 import CursorLight from "./components/CursorLight/CursorLight.jsx";
 
 const AppRoute = () => {
-  const [showOpening, setShowOpening] = useState(false);
+  const [showOpening, setShowOpening] = useState(true);
   const [showMiddleNav, setShowMiddleNav] = useState(false);
   const [showLightBg, setShowLightBg] = useState(false);
 
